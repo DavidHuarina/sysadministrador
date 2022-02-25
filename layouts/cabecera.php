@@ -41,6 +41,10 @@ $urmesCurso2="index.php?opcion=mesCurso2";
               $globalNombreArea=$_SESSION['globalNombreArea'];
               $fechaSistema=date("d/m/Y");
               $horaSistema=date("H:i");
+
+              $proyecto=dirname(__FILE__,2);
+              $proy=explode("\\", $proyecto);
+              $nombreDir=strtolower($proy[count($proy)-1]);
             ?>
             
 
@@ -49,7 +53,7 @@ $urmesCurso2="index.php?opcion=mesCurso2";
             <h6>Mes Trabajo: </h6>&nbsp;<h4 class="text-danger font-weight-bold"><a title="Cambiar Mes de Trabajo" style="color:#FF0000; " href='<?=$urmesCurso2?>' >[<?=$globalMes;?>]</a></h4>&nbsp;&nbsp;&nbsp;
             <h6>Unidad: </h6>&nbsp;<h4 class="text-danger font-weight-bold"><a title="Cambiar Oficina de Trabajo" style="color:#FF0000; " href='<?=$urllistUnidadOrganizacional?>' >[ <?=$globalNombreUnidad;?> ]</a></h4> &nbsp;&nbsp; <h6>Area: </h6>&nbsp;<h4 class="text-danger font-weight-bold"><a title="Aceptar Solicitud" style="color:#FF0000; " href='#' >[ <?=$globalNombreArea;?> ]</a></h4>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
+            <h6 class="text-dark font-weight-bold"><?="WEB: IP_SERVER / ".$nombreDir?></h6>
           <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
               <!--li class="nav-item">
